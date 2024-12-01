@@ -1,6 +1,6 @@
 {
   "name": "rescript-headlessui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ReScript bindings to HeadlessUI React component library",
   "keywords": [
     "rescript",
@@ -39,6 +39,6 @@
     "rescript-webapi": "0.9.1"
   },
   "dependencies": {
-    "@headlessui/react":"2.2.0"
+    "@headlessui/react": "2.2.0"
   }
 }
