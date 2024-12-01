@@ -1,6 +1,6 @@
 # rescript-headlessui
 
-[![npm](https://img.shields.io/npm/v/rescript-headless.svg)](https://npmjs.org/rescript-headless)
+[![npm](https://img.shields.io/npm/v/rescript-headlessui.svg)](https://www.npmjs.com/package/rescript-headlessui)
 
 This library provides [ReScript](https://rescript-lang.org/) bindings for [HeadlessUI](https://headlessui.com/) React components.
 
@@ -22,7 +22,11 @@ Add it to `bs-dependencies` in your `rescript.json`:
 
 ### Props
 
-To use `ReactDOM.domProps` in all components, it was necessary to remove collisions. This was achieved by maintaining a custom list of props that excludes most of the fields defined by HeadlessUI. The only exception is for components with event handlers or names resembling event handlers (e.g., `onChange`). Instead of removing these properties globally, they were overridden in the specific modules where they are used. For example, `<Combobox.Input onChange={...} />` should be written as `<Combobox.Input onChangeHeadless={...} />`, with the function defined as `@as("onChange") onChangeHeadless?: ReactEvent.Form.t => unit`. If you need one of the properties listed below, please wrap the component in a native element.
+To use `ReactDOM.domProps` in all components, it was necessary to remove collisions. This was achieved by maintaining a custom list of props that excludes most of the fields defined by HeadlessUI.
+
+The only exception is for components with event handlers or names resembling event handlers (e.g., `onChange`). Instead of removing these properties globally, they were overridden in the specific modules where they are used. For example, `<Combobox.Input onChange={...} />` should be written as `<Combobox.Input onChangeHeadless={...} />`, with the function defined as `@as("onChange") onChangeHeadless?: ReactEvent.Form.t => unit`.
+
+If you need one of the properties listed below, please wrap the component in a native element.
 
 ```
 {disabled, value, defaultValue, by, multiple, name, form, children, as_, type, checked, defaultChecked, order, role, autoFocus, open_}
@@ -40,7 +44,7 @@ role?: @string
   | #alertdialog
 ],
 
-// <Button type#submit ... />
+// <Button type=#submit ... />
 type_?: @string
 [
   | #button
