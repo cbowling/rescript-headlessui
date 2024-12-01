@@ -1,0 +1,44 @@
+{
+  "name": "rescript-headlessui",
+  "version": "0.1.0",
+  "description": "ReScript bindings to HeadlessUI React component library",
+  "keywords": [
+    "rescript",
+    "bindings",
+    "headlessui"
+  ],
+  "author": "Chris Bowling <cjbowln@gmail.com> (https://github.com/cbowling)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cbowling/rescript-headlessui.git"
+  },
+  "homepage": "https://github.com/cbowling/rescript-headlessui#readme",
+  "bugs": "https://github.com/cbowling/rescript-headlessui/issues",
+  "files": [
+    "/src",
+    "/rescript.json"
+  ],
+  "type": "module",
+  "scripts": {
+    "res:build": "rescript build",
+    "res:dev": "rescript build -w",
+    "res:clean": "rescript clean",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.1"
+  },
+  "peerDependencies": {
+    "@rescript/core": "1.6.1",
+    "@rescript/react": "0.13.0",
+    "rescript": "11.1.4",
+    "rescript-webapi": "0.9.1"
+  },
+  "dependencies": {
+    "@headlessui/react":"2.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "rescript-headlessui",
+    "sources": [
+      {
+        "dir": "src",
+        "subdirs": true
+      }
+    ],
+    "package-specs": {
+      "module": "esmodule"
+    },
+    "suffix": ".res.js",
+    "bsc-flags": [
+      "-bs-g",
+      "-open RescriptCore"
+    ],
+    "bs-dependencies": [
+      "@rescript/react",
+      "@rescript/core",
+      "rescript-webapi"
+    ],
+    "warnings": {
+      "number": "+A-42-44-102-40-4-48",
+      "error": "+A"
+    },
+    "reanalyze": {
+      "analysis": ["dce", "exception"]
+    },
+    "namespace": true,
+    "jsx": { "version": 4 }
+  }
